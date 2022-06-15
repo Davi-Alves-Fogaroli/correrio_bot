@@ -1,0 +1,13 @@
+Test2:
+-pasta in-out
+-in (excel) colunas [ep, ederço]
+-pegar o sep automaticamente do excel
+-entra no site do correiro pesquisar os sep
+-pegar endereço completo mostrado como resutado 
+	da busca do sep
+-atualizar (automaticamente) o endereço da 
+	planilha exel com o novo endereço
+-apos terminar clonar (dica "mover" ?) o arquivo 
+	excel para uma nova pasta
+-enviar para o mesmo email (do joão Luiz) do 
+	invite da entrevista

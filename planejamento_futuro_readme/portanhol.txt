@@ -1,0 +1,31 @@
+-preparar ambiente virtual
+	-virtualenv
+	-dot env
+	-selenium
+	...	
+-preparar variaveis de ambiente (chome)
+-configurar driver
+	-handles
+	-path(versão atualizada do code)
+	-criar file para armazenar o dados
+-Aprender a automatizaer excel com python
+	-abrir exel
+	-acessar coluna cep
+	-armazaner dados
+-abrir o site do correio e 
+	-analizar a estrutura da pesquisa, dps da primeira tbm
+	-abrir com code o site ja na pagina de pesquisa
+	-maximizar a tela
+-criar def 
+	-percorrer a lista de cep
+	-enviar 1a1 para a pesquisa
+	-pegar o endereço referente ao sep
+	-armazenar em dicionario cep e end atualizado
+-jogar dic em lista e lista em json
+-fechar arquivo
+-jogar json em excel automaticamente
+-finalizar com 2execl em diretorios diferentes mas 
+em mesmos projeto
+
+
+
