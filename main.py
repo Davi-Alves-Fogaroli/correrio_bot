@@ -1,64 +1,62 @@
-from dotenv import load_dotenv
-import os
-import js2py
-# Error libs
-from selenium.common.exceptions import WebDriverException
-# selenium
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-from selenium import webdriver
-# excel lib
-import openpyxl
-
-print("....Start....")
-
-load_dotenv()
-
-# op = Options 
-# AttributeError: type object 'Options' has no attribute '_ignore_local_proxy'
-#opitions.headless = True <- Hability to run in server"
-
-try:
-    # configure and define webdriver
-    service = Service(os.getenv("DRIVER_PATH"))
-    driver = webdriver.Chrome(service=service)
-    driver.get("https://buscacepinter.correios.com.br/app/endereco/index.php")
-    driver.maximize_window()
-except WebDriverException :
-    print("\n\n\n","ERROR: Verify you crhomedriver driver version and yor connection","\n\n\n")
-
-# open excel
-zip_code_without_address = openpyxl.load_workbook("excel\excel_desatualizado.xlsx")
-# select page
-planilha1 = zip_code_without_address["planilha 1"]
-# storage zip codes in list
-zip_code_list = [row[0].value for row in planilha1.iter_rows(min_row=2, max_row=11)]
-# print("row", len(zip_code_list), zip_code_list)
-
 import time
-def send_zip_codes_to_post_office_site(driver,zip_code_list):
-    # selecte 
-    for cep in zip_code_list:
-        driver.find_element(By.ID, "endereco").send_keys(f"{cep}" + Keys.ENTER)
-        # print(type(cep))
+from pycep_correios import get_address_from_cep, WebService
+import openpyxl
+import logging
+import os
+
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s:%(levelname)s:%(message)s',
+                    handlers=[
+                        logging.FileHandler("debug.log"),
+                        logging.StreamHandler()  # print to console
+                    ])
+
+logging.info("Starting")
+
+ceps_file = os.path.join(os.path.dirname(__file__), "excel/excel_desatualizado.xlsx")
+output_file = os.path.join(os.path.dirname(__file__), "excel/excel_atualizado.xlsx")
+
+logging.info("Opening ceps file")
+
+zip_code_without_address = openpyxl.load_workbook(ceps_file)
+planilha1 = zip_code_without_address["planilha 1"]
+ceps = [row[0].value for row in planilha1.iter_rows(min_row=2, max_row=11)]
+
+def get_addresses(ceps: list) -> list:
+    address_list = []
+
+    for cep in ceps:
+        logging.info(f"Getting address for cep: {cep}")
         
-        #mensagem-resultado 69912-655
-        tbody = driver.find_element(By.XPATH, "//*[@id='resultado-DNEC']/tbody")
-        tr = tbody.find_elements(By.XPATH, "//tr")
-        # td = tr.find_element(By.XPATH, '//td')
-        for td in tr:
-            val = td.get_propert("data-th")
+        try:
+            address = get_address_from_cep(cep, webservice=WebService.CORREIOS)
+            logging.info(f"Address: {address}")
+            address_list.append(address)
+            time.sleep(2)
         
-        # print("tbody :", tbody.text)
-            print("tr :", val)
+        except Exception as e:
+            logging.error(f"Getting {e} for cep: {cep}")
+            time.sleep(2)
+            continue
 
-        # wait and click buton
-        WebDriverWait(driver, timeout=10).until(EC.element_to_be_clickable((By.ID, "btn_nbusca"))).click()
+    return address_list
 
-    return
+logging.info("Getting addresses")
 
-send_zip_codes_to_post_office_site(driver, zip_code_list)
+addresses = get_addresses(ceps)
+
+logging.info("Saving addresses")
+
+wb = openpyxl.Workbook()
+sheet = wb.active
+sheet.title = "planilha 1"
+sheet.append(["CEP", "Logradouro", "Bairro", "Cidade", "Estado"])
+
+for address in addresses:
+    logging.info(f"Saving address: {address}")
+    sheet.append([address["cep"], address["logradouro"],
+                 address["bairro"], address["cidade"], address["uf"]])
+
+wb.save(output_file)
+
+logging.info("Finished")
