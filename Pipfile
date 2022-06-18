@@ -5,8 +5,9 @@ name = "pypi"
 
 [packages]
 selenium = "*"
-python-dotenv = "*"
+git stat = "*"
 openpyxl = "*"
+js2py = "*"
 
 [dev-packages]
 
