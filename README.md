@@ -19,9 +19,9 @@
 - $ python main.py
 
 - Before run code 
-- ![image](https://user-images.githubusercontent.com/61630258/174611125-1e70e68f-c90d-4c6b-83a4-8f63dcbb3074.png)
+- ![image](https://user-images.githubusercontent.com/61630258/174611707-27dd7ccd-2186-4861-99d0-9bc4c68dcec6.png)
 - Afeter run code 
-- ![image](https://user-images.githubusercontent.com/61630258/174611209-15b96097-a7ed-4337-b5e8-c36393996f45.png)
+- ![image](https://user-images.githubusercontent.com/61630258/174611748-2d73ecc7-a209-46f1-b939-73962e0259d0.png)
 
 - Logs 
-![image](https://user-images.githubusercontent.com/61630258/174610993-aa0fa322-9c80-42d4-9ccb-46ef76478ea1.png)
+![log_bot_correrios](https://user-images.githubusercontent.com/61630258/174612155-43d3045c-1d9c-4b4e-84b5-4603ea95e1b6.png)
