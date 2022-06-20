@@ -20,7 +20,7 @@
 
 - Before run code 
 - ![image](https://user-images.githubusercontent.com/61630258/174611707-27dd7ccd-2186-4861-99d0-9bc4c68dcec6.png)
-- Afeter run code 
+- After run code 
 - ![image](https://user-images.githubusercontent.com/61630258/174611748-2d73ecc7-a209-46f1-b939-73962e0259d0.png)
 
 - Logs 
