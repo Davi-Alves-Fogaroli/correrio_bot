@@ -67,3 +67,37 @@
 2022-06-20 09:49:58,493:INFO:Saving address: {'bairro': 'Barra do Ceará', 'cep': '60333640', 'cidade': 'Fortaleza', 'logradouro': 'Rua Pedro Rodrigues', 'uf': 'CE', 'complemento': None}
 2022-06-20 09:49:58,493:INFO:Saving address: {'bairro': 'Recanto Feliz', 'cep': '29195633', 'cidade': 'Aracruz', 'logradouro': 'Rua José Zamperlini', 'uf': 'ES', 'complemento': None}
 2022-06-20 09:49:58,507:INFO:Finished
+2022-06-20 10:08:41,080:INFO:Starting
+2022-06-20 10:08:41,080:INFO:Opening ceps file
+2022-06-20 10:08:41,085:INFO:Getting addresses
+2022-06-20 10:08:41,085:INFO:Getting address for cep: 07134-100
+2022-06-20 10:08:41,616:INFO:Address: {'bairro': 'Vila São João Batista', 'cep': '07134100', 'cidade': 'Guarulhos', 'logradouro': 'Rua Nossa Senhora Dos Remédios', 'uf': 'SP', 'complemento': None}
+2022-06-20 10:08:43,642:INFO:Getting address for cep: 96501-355
+2022-06-20 10:08:44,263:INFO:Address: {'bairro': 'Centro', 'cep': '96501355', 'cidade': 'Cachoeira do Sul', 'logradouro': 'Praça Reinaldo Feldmann', 'uf': 'RS', 'complemento': None}
+2022-06-20 10:08:46,280:INFO:Getting address for cep: 69912-655
+2022-06-20 10:08:46,943:ERROR:Getting CEP NAO ENCONTRADO for cep: 69912-655
+2022-06-20 10:08:48,947:INFO:Getting address for cep: 85911-340
+2022-06-20 10:08:49,335:INFO:Address: {'bairro': 'Jardim Panorama', 'cep': '85911340', 'cidade': 'Toledo', 'logradouro': 'Estrada Narciso Antônio Casarotto', 'uf': 'PR', 'complemento': None}
+2022-06-20 10:08:51,347:INFO:Getting address for cep: 69313-085
+2022-06-20 10:08:52,132:INFO:Address: {'bairro': 'Jóquei Clube', 'cep': '69313085', 'cidade': 'Boa Vista', 'logradouro': 'Rua Águas Marinhas', 'uf': 'RR', 'complemento': '(Cj C Servidor)'}
+2022-06-20 10:08:54,143:INFO:Getting address for cep: 78042-100
+2022-06-20 10:08:54,527:INFO:Address: {'bairro': 'Parque Amperco', 'cep': '78042100', 'cidade': 'Cuiabá', 'logradouro': 'Rua Primavera', 'uf': 'MT', 'complemento': None}
+2022-06-20 10:08:56,538:INFO:Getting address for cep: 59035-148
+2022-06-20 10:08:57,205:INFO:Address: {'bairro': 'Quintas', 'cep': '59035148', 'cidade': 'Natal', 'logradouro': '2ª Travessa Vilela', 'uf': 'RN', 'complemento': None}
+2022-06-20 10:08:59,210:INFO:Getting address for cep: 57302-676
+2022-06-20 10:08:59,672:INFO:Address: {'bairro': 'Canafístula', 'cep': '57302676', 'cidade': 'Arapiraca', 'logradouro': 'Avenida Miguel Guimarães Silva', 'uf': 'AL', 'complemento': None}
+2022-06-20 10:09:01,680:INFO:Getting address for cep: 60333-640
+2022-06-20 10:09:02,084:INFO:Address: {'bairro': 'Barra do Ceará', 'cep': '60333640', 'cidade': 'Fortaleza', 'logradouro': 'Rua Pedro Rodrigues', 'uf': 'CE', 'complemento': None}
+2022-06-20 10:09:04,099:INFO:Getting address for cep: 29195-633
+2022-06-20 10:09:04,516:INFO:Address: {'bairro': 'Recanto Feliz', 'cep': '29195633', 'cidade': 'Aracruz', 'logradouro': 'Rua José Zamperlini', 'uf': 'ES', 'complemento': None}
+2022-06-20 10:09:06,519:INFO:Saving addresses
+2022-06-20 10:09:06,520:INFO:Saving address: {'bairro': 'Vila São João Batista', 'cep': '07134100', 'cidade': 'Guarulhos', 'logradouro': 'Rua Nossa Senhora Dos Remédios', 'uf': 'SP', 'complemento': None}
+2022-06-20 10:09:06,521:INFO:Saving address: {'bairro': 'Centro', 'cep': '96501355', 'cidade': 'Cachoeira do Sul', 'logradouro': 'Praça Reinaldo Feldmann', 'uf': 'RS', 'complemento': None}
+2022-06-20 10:09:06,521:INFO:Saving address: {'bairro': 'Jardim Panorama', 'cep': '85911340', 'cidade': 'Toledo', 'logradouro': 'Estrada Narciso Antônio Casarotto', 'uf': 'PR', 'complemento': None}
+2022-06-20 10:09:06,521:INFO:Saving address: {'bairro': 'Jóquei Clube', 'cep': '69313085', 'cidade': 'Boa Vista', 'logradouro': 'Rua Águas Marinhas', 'uf': 'RR', 'complemento': '(Cj C Servidor)'}
+2022-06-20 10:09:06,522:INFO:Saving address: {'bairro': 'Parque Amperco', 'cep': '78042100', 'cidade': 'Cuiabá', 'logradouro': 'Rua Primavera', 'uf': 'MT', 'complemento': None}
+2022-06-20 10:09:06,522:INFO:Saving address: {'bairro': 'Quintas', 'cep': '59035148', 'cidade': 'Natal', 'logradouro': '2ª Travessa Vilela', 'uf': 'RN', 'complemento': None}
+2022-06-20 10:09:06,523:INFO:Saving address: {'bairro': 'Canafístula', 'cep': '57302676', 'cidade': 'Arapiraca', 'logradouro': 'Avenida Miguel Guimarães Silva', 'uf': 'AL', 'complemento': None}
+2022-06-20 10:09:06,523:INFO:Saving address: {'bairro': 'Barra do Ceará', 'cep': '60333640', 'cidade': 'Fortaleza', 'logradouro': 'Rua Pedro Rodrigues', 'uf': 'CE', 'complemento': None}
+2022-06-20 10:09:06,523:INFO:Saving address: {'bairro': 'Recanto Feliz', 'cep': '29195633', 'cidade': 'Aracruz', 'logradouro': 'Rua José Zamperlini', 'uf': 'ES', 'complemento': None}
+2022-06-20 10:09:06,533:INFO:Finished
