@@ -1,1 +1,0 @@
-console.log("Obrigado man S2")
