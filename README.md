@@ -1,6 +1,6 @@
 # Bot to consume post office api
 
-## Steps to run the project: " https://github.com/Davi-Alves-Fogaroli/correrio_bot/new/main?readme=1 "
+## Steps to run the project: " https://github.com/Davi-Alves-Fogaroli/correrio_bot/tree/main#readme "
 
 #### To clone repositori 
 - $ git init 
