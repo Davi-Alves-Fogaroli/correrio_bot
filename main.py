@@ -80,7 +80,7 @@ logging.info("Saving addresses")
 wb = openpyxl.Workbook()
 sheet = wb.active
 sheet.title = "planilha 1"
-sheet.append(["CEP", "Logradouro", "Bairro", "Cidade", "Estado"])
+sheet.append(["Logradouro", "Bairro", "Cidade", "Estado", "CEP"])
 
 for address in addresses:
     logging.info(f"Saving address: {address}")
