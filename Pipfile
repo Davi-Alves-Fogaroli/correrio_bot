@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 pycep-correios = "*"
 openpyxl = "*"
+python-dotenv = "*"
+selenium = "*"
 
 [dev-packages]
 
