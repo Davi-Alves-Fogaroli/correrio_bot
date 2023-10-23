@@ -31,8 +31,10 @@
 
 ### 3º step:
 -Set webdriver environment variable
+
 -In the root of the project create a file called ".env" use the file "example.env" as reference
--in ".env", create the variable "DRIVER_PATCH" and pass the relative or absolute path of your web driver (OBS: only one of the ways is enough)
+
+-In ".env", create the variable "DRIVER_PATCH" and pass the relative or absolute path of your web driver (OBS: only one of the ways is enough)
 
 ### 4º step:
 -With the previous steps done, open the terminal and run the following command:
